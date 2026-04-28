@@ -19,7 +19,7 @@ A self-hosted reverse proxy dashboard for KVM/Proxmox (and any web-based managem
 ```yaml
 services:
   kvm-router:
-    image: clinta74/kvm-router:latest
+    image: candrews74/kvm-router:latest
     container_name: kvm-router
     ports:
       - "6080:80"
@@ -84,13 +84,13 @@ docker run -p 6080:80 -e JWT_SECRET=devsecret kvm-router
 
 ## CI / Docker Hub
 
-Pushes to `main` automatically build and publish `clinta74/kvm-router:latest` via GitHub Actions. Version tags (`v1.2.3`) also publish `1.2.3` and `1.2` tags.
+Pushes to `main` automatically build and publish `candrews74/kvm-router:latest` via GitHub Actions. Version tags (`v1.2.3`) also publish `1.2.3` and `1.2` tags.
 
 Add these secrets to the GitHub repository (`Settings → Secrets → Actions`):
 
 | Secret | Value |
 |---|---|
-| `DOCKERHUB_USERNAME` | `clinta74` |
+| `DOCKERHUB_USERNAME` | `candrews74` |
 | `DOCKERHUB_TOKEN` | Docker Hub access token |
 
 ## Security Notes
