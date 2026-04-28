@@ -1,6 +1,6 @@
 services:
   kvm-router:
-    image: candrews74/kvm-router:latest
+    image: clinta74/kvm-router:latest
     container_name: kvm-router
     ports:
       - "6080:80"
