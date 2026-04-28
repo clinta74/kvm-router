@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+api/node_modules/
+ui/node_modules/
+
+# Build output
+api/dist/
+ui/dist/
+
+# SQLite database
+*.db
+*.db-shm
+*.db-wal
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.suo
+*.user
+
+# Docker
+docker-compose.override.yml

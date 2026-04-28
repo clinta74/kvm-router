@@ -1,0 +1,19 @@
+services:
+  kvm-router:
+    image: candrews74/kvm-router:latest
+    container_name: kvm-router
+    ports:
+      - "6080:80"
+    volumes:
+      - kvm-data:/data
+    environment:
+      # REQUIRED — change this to a long random string before deploying
+      JWT_SECRET: 123450dfdsf43435
+      DB_PATH: /data/kvm.db
+      # Optional — pre-seed the first admin account on first run
+      # ADMIN_USERNAME: admin
+      # ADMIN_PASSWORD: changeme
+    restart: unless-stopped
+
+volumes:
+  kvm-data:

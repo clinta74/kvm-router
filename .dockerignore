@@ -1,0 +1,29 @@
+# Dependencies
+node_modules
+**/node_modules
+
+# Build outputs
+api/dist
+ui/dist
+
+# SQLite dev database
+*.db
+*.db-shm
+*.db-wal
+
+# Environment files
+.env
+.env.*
+
+# Editor
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
