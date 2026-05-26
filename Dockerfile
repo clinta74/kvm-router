@@ -1,5 +1,5 @@
 # Stage 1: Build the API
-FROM node:22-alpine AS api-builder
+FROM --platform=$BUILDPLATFORM node:22-alpine AS api-builder
 WORKDIR /build/api
 COPY api/package*.json ./
 RUN npm ci
@@ -7,7 +7,7 @@ COPY api/ ./
 RUN npm run build
 
 # Stage 2: Build the UI
-FROM node:22-alpine AS ui-builder
+FROM --platform=$BUILDPLATFORM node:22-alpine AS ui-builder
 WORKDIR /build/ui
 COPY ui/package*.json ./
 RUN npm ci
